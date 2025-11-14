@@ -1,0 +1,49 @@
+meta:
+  six_code: "101000"
+  index: 40
+  version: "0.1"
+  created: 2025-11-14
+mapping:
+  expand12:
+    - l1 101000
+    - l2 101000
+    - l3 101000
+    - l4 101000
+    - l5 101000
+    - r1 101000
+    - r2 101000
+    - r3 101000
+    - r4 101000
+    - r5 101000
+    - c1 101000
+    - c2 101000
+  neighbors_h1:
+    - 001000
+    - 111000
+    - 100000
+    - 101100
+    - 101010
+    - 101001
+semantics:
+  kernel: ""
+  motifs: []
+  questions: []
+operators:
+  suggested: []
+  notes: ""
+router:
+  input_signals: []
+  default_module_priority: [l1,l2,l3,l4,l5,r1,r2,r3,r4,r5,c1,c2]
+qa:
+  invariants:
+    expand12_count: 12
+    neighbors_h1_count: 6
+    min_affinity_self: 6
+assets:
+  prompt_cn: ""
+  prompt_en: ""
+  icon_path: ""
+provenance:
+  author: "iephome"
+  generated_by: "HEXA64_MVP_v0_1/tools/gen_cosmic.py"
+  commit: ""
