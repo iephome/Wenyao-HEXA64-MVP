@@ -23,10 +23,15 @@ jobs:
       - name: Validate Cosmic YAML
         run: |
           python3 tools/validate_cosmic.py
+      - name: Generate cards & dashboard
+        run: |
+          python3 tools/gen_cards.py
+          python3 tools/muse_dash.py || true
       - name: Upload QA artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: qa-bundle
+          name: site-bundle
           path: |
             tests/report.csv
-            cosmic/*.yaml
+            out/cards_meta.csv
+            out/muse_dashboard.html
