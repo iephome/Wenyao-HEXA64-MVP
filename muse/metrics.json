@@ -1,0 +1,16 @@
+{
+  "period_days": 7,
+  "period_start": "2025-11-14",
+  "period_end": "2025-11-20",
+  "last_updated": "2025-11-14",
+  "input_diversity_7d": 1,
+  "variant_rate": 1.0,
+  "ship_latency_avg_h": 0.0,
+  "qa_pass_rate": 1.0,
+  "reuse_ratio": 0.0,
+  "rest_blocks_7d": 1.0,
+  "notes": "填 seeds.csv / variants.csv / rest.csv / ship_log.csv 後，執行 update_metrics.py 自動更新。",
+  "variant_rate_numerator": 1,
+  "variant_rate_denominator": 1,
+  "rest_minutes_7d": 25
+}

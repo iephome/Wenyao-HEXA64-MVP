@@ -1,0 +1,2 @@
+date,artifact_id,six_code,task,product_type,duration_min,qa_pass,notes
+2025-11-14,a001,000100,DemoSet,15-grid,20,1,first ship
