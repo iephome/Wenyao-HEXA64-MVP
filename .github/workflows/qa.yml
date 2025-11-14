@@ -1,0 +1,32 @@
+name: QA (HEXA64)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run HEXA registry QA
+        run: |
+          python3 tests/test_runner.py
+          head -n 5 tests/report.csv
+      - name: Validate Cosmic YAML
+        run: |
+          python3 tools/validate_cosmic.py
+      - name: Upload QA artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-bundle
+          path: |
+            tests/report.csv
+            cosmic/*.yaml
